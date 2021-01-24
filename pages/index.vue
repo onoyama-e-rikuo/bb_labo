@@ -1,6 +1,7 @@
 <template>
   <div>
     <bb-carousels />
+    <bb-info />
   </div>
 </template>
 

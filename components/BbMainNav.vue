@@ -7,7 +7,7 @@
         <v-btn icon @click.stop="drawer = !drawer" height="24">
           <v-icon size="40">mdi-menu</v-icon>
         </v-btn>
-        <div>menu</div>
+        <div class="font-weight-medium text-subtitle-2">menu</div>
       </div>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary right>
