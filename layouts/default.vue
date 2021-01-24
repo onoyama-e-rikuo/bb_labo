@@ -1,8 +1,11 @@
 <template>
-  <v-app>
-    <v-container fluid pa-0>
-      <bb-sub-nav v-if="$device.isDesktopOrTablet" />
-      <bb-main-nav />
+  <v-app style="overflow: hidden">
+    <v-container fluid class="pa-0">
+      <v-row no-gutters>
+        <v-col cols="12">
+          <bb-main-nav />
+        </v-col>
+      </v-row>
       <v-main>
         <nuxt />
       </v-main>

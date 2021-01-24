@@ -1,14 +1,16 @@
 <template>
-  <v-container fluid pa-0>
-    <v-app-bar flat color="white">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>BB LABO.</v-toolbar-title>
+  <v-container fluid class="pa-0">
+    <v-app-bar flat height="80">
+      <img class="bb-logo" src="~/assets/images/bb_logo.svg" />
       <v-spacer></v-spacer>
-      <div class="text-center">
-        <v-btn color="primary" large> 予約する </v-btn>
+      <div class="text-center mt-auto">
+        <v-btn icon @click.stop="drawer = !drawer" height="24">
+          <v-icon size="40">mdi-menu</v-icon>
+        </v-btn>
+        <div>menu</div>
       </div>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" absolute temporary right>
       <v-list-item>
         <v-list-item-icon @click="drawer = !drawer">
           <v-icon>mdi-close</v-icon>
@@ -54,4 +56,11 @@ export default class BbMainNav extends Vue {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.theme--light.v-app-bar.v-toolbar.v-sheet {
+  background-color: unset;
+}
+.bb-logo {
+  height: 100%;
+}
+</style>

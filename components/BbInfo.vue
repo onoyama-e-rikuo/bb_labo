@@ -2,6 +2,9 @@
   <v-card flat tile>
     <v-container fluid class="py-0">
       <v-row no-gutters justify="center">
+        <v-row justify="center">
+          <v-col cols="6" class="text-center text-h5">NEWS</v-col>
+        </v-row>
         <v-col cols="12">
           <v-card-title class="justify-center red--text">
             当ジムにおける感染症対策について
