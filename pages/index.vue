@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <bb-carousels />
+  </div>
 </template>
 
 <script lang="ts">
