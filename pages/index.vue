@@ -2,6 +2,7 @@
   <div>
     <bb-carousels />
     <bb-info />
+    <bb-about />
   </div>
 </template>
 

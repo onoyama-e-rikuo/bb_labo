@@ -1,7 +1,9 @@
 <template>
   <div class="text-center">
-    <div class="text-h6 text-center font-weight-black mt-6">INFORMATION</div>
-    <div class="text-caption text-center">お知らせ</div>
+    <div class="blue--text font-weight-bold text--darken-4 text-caption mt-6">
+      お知らせ
+    </div>
+    <div class="text-h6 font-weight-black">INFORMATION</div>
 
     <v-dialog scrollable v-model="dialog">
       <template v-slot:activator="{ on, attrs }">
@@ -71,6 +73,7 @@
         </v-card-text>
       </v-card>
     </v-dialog>
+    <v-divider class="mt-6"></v-divider>
   </div>
 </template>
 

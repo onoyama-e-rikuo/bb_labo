@@ -1,27 +1,17 @@
 <template>
-  <v-card flat tile>
-    <v-img
-      height="200px"
-      src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
-    >
-      <v-container fluid class="py-0">
-        <v-row no-gutters justify="center">
-          <v-col cols="12">
-            <v-card-title class="justify-center red--text">
-              BB LABO.について知る
-            </v-card-title>
-            <v-card-text>
-              <v-row align="center" justify="center" class="pa-0">
-                <p>
-                  新型コロナウイルスの感染が拡大しており、近畿にも緊急事態宣言が発出された状況を鑑みBB
-                  LABO.では日本フィットネス協会のガイドラインに沿って運営を行い、かつ自主的に営業を一部変更することといたしましたのでご報告させていただきます。
-                </p>
-              </v-row>
-            </v-card-text>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-img>
+  <v-card tile flat class="text-center">
+    <div class="blue--text font-weight-bold text--darken-4 text-caption mt-6">
+      ABOUT
+    </div>
+    <div class="text-h6 text-center font-weight-black">BB LABO.について</div>
+    <div class="d-flex">
+      <v-icon size="90">mdi-weight-lifter</v-icon>
+      <v-card-text class="text-left">
+        BB
+        LABO.では初心者の方から経験者の方まで、全ての方ヘ最適なトレーニング方法を提案しています。
+      </v-card-text>
+      <v-btn class=""></v-btn>
+    </div>
   </v-card>
 </template>
 
