@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="text-center mb-6">
     <div class="blue--text font-weight-bold text--darken-4 text-caption mt-6">
       お知らせ
     </div>
@@ -73,7 +73,6 @@
         </v-card-text>
       </v-card>
     </v-dialog>
-    <v-divider class="mt-6"></v-divider>
   </div>
 </template>
 

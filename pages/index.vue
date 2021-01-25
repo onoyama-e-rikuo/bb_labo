@@ -2,7 +2,9 @@
   <div>
     <bb-carousels />
     <bb-info />
-    <bb-about />
+    <v-row no-gutters>
+      <bb-about />
+    </v-row>
   </div>
 </template>
 

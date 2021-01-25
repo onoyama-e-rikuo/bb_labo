@@ -1,18 +1,22 @@
 <template>
-  <v-card tile flat class="text-center">
-    <div class="blue--text font-weight-bold text--darken-4 text-caption mt-6">
-      ABOUT
-    </div>
-    <div class="text-h6 text-center font-weight-black">BB LABO.について</div>
-    <div class="d-flex">
-      <v-icon size="90">mdi-weight-lifter</v-icon>
-      <v-card-text class="text-left">
-        BB
-        LABO.では初心者の方から経験者の方まで、全ての方ヘ最適なトレーニング方法を提案しています。
+  <v-col cols="12" sm="12" lg="4">
+    <v-card outlined flat class="bb-about-card text-center pa-6">
+      <div class="blue--text font-weight-bold text--darken-4 text-caption">
+        ABOUT
+      </div>
+      <div class="text-h6 text-center font-weight-medium">BB LABO.について</div>
+      <v-icon size="90" class="mt-6">mdi-weight-lifter</v-icon>
+      <v-card-text>
+        BB LABO.では初心者の方から経験者の方まで、<br />全ての方ヘ最適なトレーニング方法を提案しています。
       </v-card-text>
-      <v-btn class=""></v-btn>
-    </div>
-  </v-card>
+      <v-btn text nuxt to="/about" class="bb-about-button">
+        <span>
+          もっと詳しく
+          <v-icon small>mdi-arrow-right-thick</v-icon>
+        </span>
+      </v-btn>
+    </v-card>
+  </v-col>
 </template>
 
 <script lang="ts">
@@ -22,4 +26,11 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class BbAbout extends Vue {}
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.bb-about-button {
+  .v-btn__content {
+    border-top: 3px solid #364e8a;
+    padding-top: 8px;
+  }
+}
+</style>
