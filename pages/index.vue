@@ -5,6 +5,7 @@
     <v-row no-gutters>
       <bb-about />
       <bb-staff />
+      <bb-menu />
     </v-row>
   </div>
 </template>
@@ -15,6 +16,7 @@ import BbCarousels from '~/components/BbCarousels.vue'
 import BbInfo from '~/components/BbInfo.vue'
 import BbAbout from '~/components/BbAbout.vue'
 import BbStaff from '~/components/BbStaff.vue'
+import BbMenu from '~/components/BbMenu.vue'
 
 @Component({
   components: {
@@ -22,6 +24,7 @@ import BbStaff from '~/components/BbStaff.vue'
     BbInfo,
     BbAbout,
     BbStaff,
+    BbMenu,
   },
 })
 export default class Index extends Vue {}
