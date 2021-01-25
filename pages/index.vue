@@ -4,6 +4,7 @@
     <bb-info />
     <v-row no-gutters>
       <bb-about />
+      <bb-staff />
     </v-row>
   </div>
 </template>
@@ -13,12 +14,14 @@ import { Component, Vue } from 'vue-property-decorator'
 import BbCarousels from '~/components/BbCarousels.vue'
 import BbInfo from '~/components/BbInfo.vue'
 import BbAbout from '~/components/BbAbout.vue'
+import BbStaff from '~/components/BbStaff.vue'
 
 @Component({
   components: {
     BbCarousels,
     BbInfo,
     BbAbout,
+    BbStaff,
   },
 })
 export default class Index extends Vue {}
