@@ -1,10 +1,9 @@
 <template>
-  <div class="text-center mb-6">
-    <div class="blue--text font-weight-bold text--darken-4 text-caption mt-6">
+  <div class="text-center pa-6">
+    <div class="blue--text font-weight-bold text--darken-4 text-caption">
       お知らせ
     </div>
-    <div class="text-h6 font-weight-black">INFORMATION</div>
-
+    <div class="text-h6 font-weight-medium">INFORMATION</div>
     <v-dialog scrollable v-model="dialog">
       <template v-slot:activator="{ on, attrs }">
         <v-btn plain v-bind="attrs" v-on="on" class="mt-4">
