@@ -1,13 +1,13 @@
 <template>
   <v-carousel
     cycle
-    height="250"
+    height="85vh"
     hide-delimiter-background
     show-arrows-on-hover
     delimiter-icon="mdi-minus"
   >
     <v-carousel-item v-for="(item, i) in items" :key="i">
-      <v-img :src="item.src" height="100%"> </v-img>
+      <v-img :src="item.src" height="100%"></v-img>
     </v-carousel-item>
   </v-carousel>
 </template>
