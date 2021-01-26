@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - fuck_vuetify',
-    title: 'fuck_vuetify',
+    titleTemplate: '%s | パーソナルトレーニングジム',
+    title: 'BB LABO.',
     htmlAttrs: {
       lang: 'ja',
     },
