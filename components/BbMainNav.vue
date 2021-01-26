@@ -49,7 +49,7 @@ export default class BbMainNav extends Vue {
     { title: 'HOME', icon: 'mdi-home' },
     { title: 'ABOUT', icon: 'mdi-information' },
     { title: 'STAFF', icon: 'mdi-account-multiple' },
-    { title: 'MENU', icon: 'mdi-book-open-page-variant' },
+    { title: 'PRICE', icon: 'mdi-book-open-page-variant' },
     { title: 'INTERVIEW', icon: 'mdi-forum' },
     { title: 'ACCESS', icon: 'mdi-google-maps' },
   ]

@@ -16,6 +16,7 @@
             </p>
             <p>駐車場2台あり</p>
           </div>
+          <v-btn depressed color="primary">Google Mapで開く</v-btn>
           <v-row no-gutters>
             <v-col cols="12" sm="12" lg="6">
               <v-card flat tile>

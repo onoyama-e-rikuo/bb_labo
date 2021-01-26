@@ -1,11 +1,13 @@
 <template>
-  <v-carousel cycle height="250" hide-delimiter-background show-arrows-on-hover>
-    <v-carousel-item v-for="(slide, i) in slides" :key="i">
-      <v-sheet :color="colors[i]" height="100%">
-        <v-row class="fill-height" align="center" justify="center">
-          <div class="display-3">{{ slide }} Slide</div>
-        </v-row>
-      </v-sheet>
+  <v-carousel
+    cycle
+    height="250"
+    hide-delimiter-background
+    show-arrows-on-hover
+    delimiter-icon="mdi-minus"
+  >
+    <v-carousel-item v-for="(item, i) in items" :key="i">
+      <v-img :src="item.src" height="100%"> </v-img>
     </v-carousel-item>
   </v-carousel>
 </template>
@@ -15,14 +17,13 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class BbCarousels extends Vue {
-  private colors = [
-    'indigo',
-    'warning',
-    'pink darken-2',
-    'red lighten-1',
-    'deep-purple accent-4',
+  private items = [
+    { src: require('../assets/images/pictures/pic1.jpg') },
+    { src: require('../assets/images/pictures/pic2.jpg') },
+    { src: require('../assets/images/pictures/pic3.jpg') },
+    { src: require('../assets/images/pictures/pic4.jpg') },
+    { src: require('../assets/images/pictures/pic5.jpg') },
   ]
-  private slides = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 }
 </script>
 
