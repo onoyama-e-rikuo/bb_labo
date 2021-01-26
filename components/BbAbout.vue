@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12" sm="12" lg="4">
+  <v-col cols="12" sm="12" lg="6">
     <v-card outlined flat class="bb-about-card text-center pa-6">
       <div class="blue--text font-weight-bold text--darken-4 text-caption">
         BB LABO.について

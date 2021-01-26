@@ -8,6 +8,7 @@
       <bb-menu />
       <bb-interview />
     </v-row>
+    <bb-access />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import BbAbout from '~/components/BbAbout.vue'
 import BbStaff from '~/components/BbStaff.vue'
 import BbMenu from '~/components/BbMenu.vue'
 import BbInterview from '~/components/BbInterview.vue'
+import BbAccess from '~/components/BbAccess.vue'
 
 @Component({
   components: {
@@ -28,6 +30,7 @@ import BbInterview from '~/components/BbInterview.vue'
     BbStaff,
     BbMenu,
     BbInterview,
+    BbAccess,
   },
 })
 export default class Index extends Vue {}
