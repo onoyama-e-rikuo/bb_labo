@@ -6,6 +6,7 @@
       <bb-about />
       <bb-staff />
       <bb-menu />
+      <bb-interview />
     </v-row>
   </div>
 </template>
@@ -17,6 +18,7 @@ import BbInfo from '~/components/BbInfo.vue'
 import BbAbout from '~/components/BbAbout.vue'
 import BbStaff from '~/components/BbStaff.vue'
 import BbMenu from '~/components/BbMenu.vue'
+import BbInterview from '~/components/BbInterview.vue'
 
 @Component({
   components: {
@@ -25,6 +27,7 @@ import BbMenu from '~/components/BbMenu.vue'
     BbAbout,
     BbStaff,
     BbMenu,
+    BbInterview,
   },
 })
 export default class Index extends Vue {}

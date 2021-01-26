@@ -3,7 +3,7 @@
     <v-app-bar flat height="80">
       <img class="bb-logo" src="~/assets/images/bb_logo.svg" />
       <v-spacer></v-spacer>
-      <div class="text-center mt-auto">
+      <div class="text-center mt-4">
         <v-btn icon @click.stop="drawer = !drawer" height="24">
           <v-icon size="40">mdi-menu</v-icon>
         </v-btn>
