@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bb-carousels />
+    <bb-firstview style="height: 100vh" />
     <bb-info />
     <v-row no-gutters>
       <bb-about />
@@ -21,6 +21,7 @@ import BbStaff from '~/components/BbStaff.vue'
 import BbMenu from '~/components/BbMenu.vue'
 import BbInterview from '~/components/BbInterview.vue'
 import BbAccess from '~/components/BbAccess.vue'
+import BbFirstview from '~/components/BbFirstview.vue'
 
 @Component({
   components: {
@@ -31,6 +32,7 @@ import BbAccess from '~/components/BbAccess.vue'
     BbMenu,
     BbInterview,
     BbAccess,
+    BbFirstview,
   },
 })
 export default class Index extends Vue {}

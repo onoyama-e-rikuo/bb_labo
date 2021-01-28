@@ -5,12 +5,10 @@
       height="50"
       width="50"
       @click.stop="drawer = !drawer"
-      color="primary"
       class="bb-nav-icon"
     >
-      <v-icon size="30">mdi-menu</v-icon>
+      <v-icon size="30" color="white">mdi-menu</v-icon>
     </v-btn>
-
     <v-navigation-drawer
       v-model="drawer"
       absolute
@@ -73,5 +71,9 @@ export default class SpNavIcon extends Vue {
 
 .v-btn--is-elevated.v-btn--fab {
   box-shadow: none;
+}
+
+.theme--light.v-btn.v-btn--has-bg {
+  background-color: #364e8a;
 }
 </style>
