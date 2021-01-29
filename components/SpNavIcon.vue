@@ -1,5 +1,6 @@
 <template>
   <div>
+    <v-img contain :src="logoText" width="150" class="bb-nav-logo-text" />
     <v-btn
       fab
       height="50"
@@ -58,10 +59,19 @@ export default class SpNavIcon extends Vue {
     { title: 'INTERVIEW', icon: 'mdi-forum' },
     { title: 'ACCESS', icon: 'mdi-google-maps' },
   ]
+
+  private logoText = require('../assets/images/bb_logo_text_white.svg')
 }
 </script>
 
 <style lang="scss">
+.bb-nav-logo-text {
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  z-index: 1;
+}
+
 .bb-nav-icon {
   position: fixed;
   top: 40px;

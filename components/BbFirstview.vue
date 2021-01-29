@@ -2,7 +2,7 @@
   <div class="box">
     <v-row no-gutters justify="center">
       <v-col cols="auto" align-self="center">
-        <v-img contain :src="img_src" height="100" width="100" class="cube" />
+        <v-img contain :src="logoCube" height="100" width="100" />
       </v-col>
     </v-row>
   </div>
@@ -13,7 +13,7 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class BbFirstview extends Vue {
-  private img_src: string = require('../assets/images/bb_logo_cube_white.svg')
+  private logoCube = require('../assets/images/bb_logo_cube_white.svg')
 }
 </script>
 
