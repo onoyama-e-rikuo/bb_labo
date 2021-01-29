@@ -1,6 +1,19 @@
 <template>
   <div>
-    <v-img contain :src="logoText" width="150" class="bb-nav-logo-text" />
+    <v-img
+      v-if="isInsideOfFirstview()"
+      contain
+      :src="logoTextWhite"
+      width="150"
+      class="bb-nav-logo-text"
+    />
+    <v-img
+      v-else
+      contain
+      :src="logoText"
+      width="150"
+      class="bb-nav-logo-text"
+    />
     <v-btn
       fab
       height="50"
@@ -60,7 +73,44 @@ export default class SpNavIcon extends Vue {
     { title: 'ACCESS', icon: 'mdi-google-maps' },
   ]
 
-  private logoText = require('../assets/images/bb_logo_text_white.svg')
+  private logoTextWhite = require('../assets/images/bb_logo_text_white.svg')
+  private logoText = require('../assets/images/bb_logo_text.svg')
+
+  private scrollY = 0
+
+  private get firstviewHeight(): number {
+    if (this.isClient) {
+      console.log(this.scrollY)
+      return window.innerHeight
+    } else return 0
+  }
+
+  private isClient = process.client
+
+  mounted() {
+    if (this.isClient) {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+  }
+
+  destroyed() {
+    if (this.isClient) {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+  }
+
+  private handleScroll() {
+    if (this.isClient) {
+      this.scrollY = window.scrollY
+      console.log(this.firstviewHeight)
+    }
+  }
+
+  private isInsideOfFirstview() {
+    if (this.scrollY < this.firstviewHeight - 50) {
+      return true
+    } else false
+  }
 }
 </script>
 
