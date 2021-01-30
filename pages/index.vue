@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bb-firstview style="height: 100vh" />
+    <bb-firstview :style="{ height: windowHeight + 'px' }" />
     <bb-info />
     <v-row no-gutters>
       <bb-about />
@@ -35,5 +35,26 @@ import BbFirstview from '~/components/BbFirstview.vue'
     BbFirstview,
   },
 })
-export default class Index extends Vue {}
+export default class Index extends Vue {
+  private windowHeight = 0
+
+  private isClient = process.client
+
+  created() {
+    if (process.client) {
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
+    }
+  }
+
+  destroyed() {
+    if (process.client) {
+      window.removeEventListener('resize', this.handleResize)
+    }
+  }
+
+  handleResize() {
+    this.windowHeight = window.innerHeight
+  }
+}
 </script>

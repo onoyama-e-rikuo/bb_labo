@@ -1,26 +1,42 @@
 <template>
-  <div class="box">
-    <v-row no-gutters justify="center">
-      <v-col cols="auto" align-self="center">
-        <v-img contain :src="logoCube" height="100" width="100" />
-      </v-col>
-    </v-row>
+  <div class="fv-box">
+    <bb-carousels />
+    <div class="fv-title">
+      <p>BODYMAKE×<br />BASEBALLMETHOD</p>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-
-@Component
+import BbCarousels from '~/components/BbCarousels.vue'
+@Component({
+  components: {
+    BbCarousels,
+  },
+})
 export default class BbFirstview extends Vue {
   private logoCube = require('../assets/images/bb_logo_cube_white.svg')
 }
 </script>
 
 <style lang="scss">
-.box {
+.fv-box {
   height: 100%;
   background-color: #364e8a;
-  padding-top: 300px;
+  position: relative;
+  display: flex;
+}
+
+.fv-title {
+  align-self: flex-end;
+  display: flex;
+  font-size: 3rem;
+  p {
+    color: #ffffff;
+    font-weight: 800;
+    writing-mode: vertical-rl;
+    line-height: 1em;
+  }
 }
 </style>

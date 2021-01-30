@@ -16,8 +16,8 @@
     />
     <v-btn
       fab
-      height="50"
-      width="50"
+      height="45"
+      width="45"
       @click.stop="drawer = !drawer"
       class="bb-nav-icon"
     >
@@ -78,18 +78,16 @@ export default class SpNavIcon extends Vue {
 
   private scrollY = 0
 
-  private get firstviewHeight(): number {
-    if (this.isClient) {
-      console.log(this.scrollY)
-      return window.innerHeight
-    } else return 0
-  }
+  private windowHeight = 0
 
   private isClient = process.client
 
-  mounted() {
+  created() {
     if (this.isClient) {
       window.addEventListener('scroll', this.handleScroll)
+      this.handleScroll()
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
     }
   }
 
@@ -102,14 +100,17 @@ export default class SpNavIcon extends Vue {
   private handleScroll() {
     if (this.isClient) {
       this.scrollY = window.scrollY
-      console.log(this.firstviewHeight)
     }
   }
 
+  handleResize() {
+    this.windowHeight = window.innerHeight
+  }
+
   private isInsideOfFirstview() {
-    if (this.scrollY < this.firstviewHeight - 50) {
+    if (this.scrollY < this.windowHeight - 30) {
       return true
-    } else false
+    }
   }
 }
 </script>
@@ -117,15 +118,15 @@ export default class SpNavIcon extends Vue {
 <style lang="scss">
 .bb-nav-logo-text {
   position: fixed;
-  top: 50px;
+  top: 30px;
   left: 10px;
   z-index: 1;
 }
 
 .bb-nav-icon {
   position: fixed;
-  top: 40px;
-  right: 30px;
+  top: 20px;
+  right: 10px;
   z-index: 1;
 }
 
@@ -134,6 +135,6 @@ export default class SpNavIcon extends Vue {
 }
 
 .theme--light.v-btn.v-btn--has-bg {
-  background-color: #364e8a;
+  background-color: #e1153a;
 }
 </style>
