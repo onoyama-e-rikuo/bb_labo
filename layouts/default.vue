@@ -4,5 +4,6 @@
     <v-main>
       <nuxt />
     </v-main>
+    <my-footer />
   </v-app>
 </template>
