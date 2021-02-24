@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar>
+    <v-app-bar flat>
       <v-icon class="navbar-menu-icon" @click="drawer = !drawer"
         >mdi-menu</v-icon
       >
@@ -9,35 +9,6 @@
         >Web予約</v-btn
       >
     </v-app-bar>
-
-    <!--こっからドロワー-->
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-      left
-      style="z-index: 2"
-    >
-      <v-list-item>
-        <v-list-item-icon @click="drawer = !drawer">
-          <v-icon>mdi-close</v-icon>
-        </v-list-item-icon>
-      </v-list-item>
-
-      <v-divider></v-divider>
-
-      <v-list class="mt-6">
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
   </div>
 </template>
 
