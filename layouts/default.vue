@@ -1,6 +1,6 @@
 <template>
   <v-app style="overflow: hidden">
-    <sp-nav-icon />
+    <navbar />
     <v-main>
       <nuxt />
     </v-main>

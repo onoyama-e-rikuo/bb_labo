@@ -1,33 +1,21 @@
 <template>
   <div>
-    <v-img
-      v-if="isInsideOfFirstview()"
-      contain
-      :src="logoTextWhite"
-      width="150"
-      class="bb-nav-logo-text"
-    />
-    <v-img
-      v-else
-      contain
-      :src="logoText"
-      width="150"
-      class="bb-nav-logo-text"
-    />
-    <v-btn
-      fab
-      height="45"
-      width="45"
-      @click.stop="drawer = !drawer"
-      class="bb-nav-icon"
-    >
-      <v-icon size="30" color="white">mdi-menu</v-icon>
-    </v-btn>
+    <v-app-bar>
+      <v-icon class="navbar-menu-icon" @click="drawer = !drawer"
+        >mdi-menu</v-icon
+      >
+      <h2 class="navbar-title">BB LABO.</h2>
+      <v-btn small outlined tile class="navbar-reservation-button"
+        >Web予約</v-btn
+      >
+    </v-app-bar>
+
+    <!--こっからドロワー-->
     <v-navigation-drawer
       v-model="drawer"
       absolute
       temporary
-      right
+      left
       style="z-index: 2"
     >
       <v-list-item>
@@ -35,10 +23,6 @@
           <v-icon>mdi-close</v-icon>
         </v-list-item-icon>
       </v-list-item>
-
-      <div class="text-center my-6">
-        <v-btn color="primary" width="80%" height="40"> 予約する </v-btn>
-      </div>
 
       <v-divider></v-divider>
 
@@ -61,16 +45,15 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export default class SpNavIcon extends Vue {
+export default class Navbar extends Vue {
   private drawer: boolean = false
 
   private items = [
-    { title: 'HOME', icon: 'mdi-home' },
-    { title: 'ABOUT', icon: 'mdi-information' },
-    { title: 'STAFF', icon: 'mdi-account-multiple' },
-    { title: 'PRICE', icon: 'mdi-book-open-page-variant' },
-    { title: 'INTERVIEW', icon: 'mdi-forum' },
-    { title: 'ACCESS', icon: 'mdi-google-maps' },
+    { title: 'Home', icon: 'mdi-home' },
+    { title: 'Programs', icon: 'mdi-dumbbell' },
+    { title: 'Trainers', icon: 'mdi-account-multiple' },
+    { title: 'Interview', icon: 'mdi-forum' },
+    { title: 'Location', icon: 'mdi-google-maps' },
   ]
 
   private logoTextWhite = require('../assets/images/bb_logo_text_white.svg')
@@ -115,26 +98,21 @@ export default class SpNavIcon extends Vue {
 }
 </script>
 
-<style lang="scss">
-.bb-nav-logo-text {
-  position: fixed;
-  top: 30px;
-  left: 10px;
-  z-index: 1;
+<style lang="scss" scoped>
+::v-deep .v-toolbar__content {
+  width: 100%;
+  position: relative;
+  display: flex;
 }
-
-.bb-nav-icon {
-  position: fixed;
-  top: 20px;
-  right: 10px;
-  z-index: 1;
+.navbar-menu-icon {
+  position: absolute;
 }
-
-.v-btn--is-elevated.v-btn--fab {
-  box-shadow: none;
+.navbar-title {
+  margin: 0 auto;
 }
-
-.theme--light.v-btn.v-btn--has-bg {
-  background-color: gray;
+.navbar-reservation-button {
+  background-color: white;
+  position: absolute;
+  right: 16px;
 }
 </style>
