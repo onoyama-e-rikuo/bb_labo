@@ -1,6 +1,6 @@
 <template>
   <div>
-    <firstview :style="{ height: windowHeight - 56 + 'px' }" />
+    <firstview :style="{ height: windowHeight + 'px' }" />
     <about />
   </div>
 </template>

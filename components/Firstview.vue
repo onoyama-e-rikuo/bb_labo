@@ -33,8 +33,7 @@ export default class Firstview extends Vue {
   width: 85%;
   position: absolute;
   bottom: 23%;
-  display: grid;
-  place-items: center;
+  padding-left: 16px;
   p {
     margin: 0;
   }
@@ -45,8 +44,7 @@ export default class Firstview extends Vue {
   width: 85%;
   position: absolute;
   bottom: 30%;
-  display: grid;
-  place-items: center;
+  padding-left: 16px;
   p {
     margin: 0;
   }

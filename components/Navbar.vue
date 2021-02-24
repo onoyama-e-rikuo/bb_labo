@@ -1,14 +1,36 @@
 <template>
   <div>
-    <v-app-bar flat>
+    <v-app-bar flat fixed>
       <v-icon class="navbar-menu-icon" @click="drawer = !drawer"
         >mdi-menu</v-icon
       >
       <h2 class="navbar-title">BB LABO.</h2>
-      <v-btn small outlined tile class="navbar-reservation-button"
+      <v-btn width="25%" small outlined tile class="navbar-reservation-button"
         >Web予約</v-btn
       >
     </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" app>
+      <v-list-item>
+        <v-list-item-icon @click="drawer = !drawer">
+          <v-icon>mdi-close</v-icon>
+        </v-list-item-icon>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list class="mt-6">
+        <v-list-item v-for="item in items" :key="item.title" link>
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 
