@@ -40,6 +40,7 @@ export default class Firstview extends Vue {
   }
 }
 .a {
+  margin-bottom: 5px;
   background-color: white;
   width: 85%;
   position: absolute;
