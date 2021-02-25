@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar flat fixed>
+    <v-app-bar flat fixed elevate-on-scroll>
       <v-icon class="navbar-menu-icon" @click="drawer = !drawer"
         >mdi-menu</v-icon
       >

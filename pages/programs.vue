@@ -9,18 +9,37 @@
       </div>
     </div>
     <div class="px-6 my-8">
-      <training-menu />
+      <div class="d-flex justify-space-around align-center">
+        <div>
+          <div class="text-caption text-center">初めての方</div>
+          <v-btn large outlined tile @click="trialClass = true"
+          ><span class="text-caption font-weight-bold">Trial Class</span></v-btn
+          >
+        </div>
+        <div>
+          <div class="text-caption text-center">2回目以降の方</div>
+          <v-btn large outlined tile @click="trialClass = false"
+          ><span class="text-caption font-weight-bold"
+          >Regular Class</span
+          ></v-btn
+          >
+        </div>
+      </div>
+      <trial-class v-if="trialClass"/>
+      <regular-class v-else/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import TrainingMenu from '~/components/TrainingMenu.vue'
+import TrialClass from "~/components/TrialClass.vue";
+import RegularClass from "~/components/RegularClass.vue";
 
 @Component({
   components: {
-    TrainingMenu,
+    TrialClass,
+    RegularClass,
   },
 })
 export default class Programs extends Vue {
@@ -44,6 +63,8 @@ export default class Programs extends Vue {
   handleResize() {
     this.windowHeight = window.innerHeight
   }
+
+  private trialClass = true
 }
 </script>
 

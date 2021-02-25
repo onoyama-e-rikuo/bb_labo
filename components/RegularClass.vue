@@ -1,46 +1,30 @@
 <template>
   <div>
-    <div class="d-flex justify-space-around align-center">
-      <div>
-        <div class="text-caption text-center">初めての方</div>
-        <v-btn large outlined tile
-          ><span class="text-caption font-weight-bold">Trial Class</span></v-btn
-        >
-      </div>
-      <div>
-        <div class="text-caption text-center">2回目以降の方</div>
-        <v-btn large outlined tile
-          ><span class="text-caption font-weight-bold"
-            >Regular Class</span
-          ></v-btn
-        >
-      </div>
-    </div>
     <div>
-      <div class="text-h5 font-weight-medium mt-8">Trial Class</div>
+      <div class="text-h5 font-weight-medium mt-8">Regular Class</div>
       <p class="text-body-2 mt-8">
-        トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。
+        レギュラークラスの説明。レギュラークラスの説明。レギュラークラスの説明。レギュラークラスの説明。レギュラークラスの説明。レギュラークラスの説明。
       </p>
       <div class="mock mt-8"></div>
     </div>
     <div class="text-center">
       <div class="mt-16">
         <span class="number text-h4 font-weight-medium">01</span>
-        <div class="text-h6 font-weight-bold mt-4">カウンセリング</div>
-        <p class="text-body-2 mt-6 px-6">
-          トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。
-        </p>
-      </div>
-      <div class="mt-16">
-        <span class="number text-h4 font-weight-medium">02</span>
         <div class="text-h6 font-weight-bold mt-4">ウォームアップ</div>
         <p class="text-body-2 mt-6 px-6">
           トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。
         </p>
       </div>
       <div class="mt-16">
-        <span class="number text-h4 font-weight-medium">03</span>
+        <span class="number text-h4 font-weight-medium">02</span>
         <div class="text-h6 font-weight-bold mt-4">マシントレーニング</div>
+        <p class="text-body-2 mt-6 px-6">
+          トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。
+        </p>
+      </div>
+      <div class="mt-16">
+        <span class="number text-h4 font-weight-medium">03</span>
+        <div class="text-h6 font-weight-bold mt-4">ファンクショナルトレーニング</div>
         <p class="text-body-2 mt-6 px-6">
           トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。トレーニングの説明。
         </p>
@@ -62,7 +46,7 @@
     </div>
     <v-divider class="mt-16"></v-divider>
     <div class="text-center">
-      <div class="text-h4 font-weight-medium mt-12">Trial</div>
+      <div class="text-h4 font-weight-medium mt-12">Schedule</div>
       <div class="text-subtitle-2">ご予約は予約専用サイトから受け付けております<br>お気軽にご連絡ください</div>
       <v-btn width="60%" x-large outlined tile class="mt-8 font-weight-bold">Web予約はこちら</v-btn>
       <div class="mt-8 text-caption">※ご予約のキャンセルは事前にお電話にて<br>ご連絡お願いいたします</div>
@@ -76,7 +60,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export default class TrainingMenu extends Vue {}
+export default class RegularClass extends Vue {}
 </script>
 
 <style lang="scss" scoped>
