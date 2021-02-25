@@ -1,6 +1,5 @@
 <template>
-  <div class="fv-box">
-    <video :src="src" class="c" autoplay muted playsinline loop />
+  <div class="fv-box" :style="{ height: windowHeight -56 + 'px' }">
     <div class="a font-weight-black text-h3">
       <p>WORK OUT WITH A PRO</p>
     </div>
@@ -12,12 +11,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-@Component({
-  components: {},
-})
-export default class Firstview extends Vue {
-  private src = require('../assets/images/635603740.118627.mp4')
 
+@Component({
+  components: {
+
+  },
+})
+export default class Programs extends Vue {
   private windowHeight = 0
 
   private isClient = process.client
@@ -45,7 +45,7 @@ export default class Firstview extends Vue {
 .fv-box {
   margin-top: 56px;
   height: 100%;
-  background-color: black;
+  background-color: darkgray;
   position: relative;
 }
 .b {
@@ -68,9 +68,5 @@ export default class Firstview extends Vue {
   p {
     margin: 0;
   }
-}
-
-.c{
-  height: 100%;
 }
 </style>
