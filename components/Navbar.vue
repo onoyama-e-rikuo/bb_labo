@@ -20,15 +20,13 @@
       <v-divider></v-divider>
 
       <v-list class="mt-6">
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon>
-            <nuxt-link :to="item.path">
+        <v-list-item v-for="item in items" :key="item.title" :to="item.path">
+            <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
-            </nuxt-link>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -45,9 +43,9 @@ export default class Navbar extends Vue {
   private items = [
     { title: 'Home', icon: 'mdi-home', path: '/' },
     { title: 'Programs', icon: 'mdi-dumbbell', path: '/programs' },
-    { title: 'Trainers', icon: 'mdi-account-multiple', path: '/programs' },
-    { title: 'Interview', icon: 'mdi-forum', path: '/programs' },
-    { title: 'Location', icon: 'mdi-google-maps', path: '/programs' },
+    { title: 'Trainers', icon: 'mdi-account-multiple', path: '/trainers' },
+    { title: 'Interview', icon: 'mdi-forum', path: '/interview' },
+    { title: 'Location', icon: 'mdi-google-maps', path: '/location' },
   ]
 
   private logoTextWhite = require('../assets/images/bb_logo_text_white.svg')

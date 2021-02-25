@@ -1,20 +1,26 @@
 <template>
-  <div class="fv-box" :style="{ height: windowHeight -56 + 'px' }">
-    <div class="a font-weight-black text-h3">
-      <p>WORK OUT WITH A PRO</p>
+  <div>
+    <div class="fv-box" :style="{ height: windowHeight - 56 + 'px' }">
+      <div class="program-title font-weight-medium text-h3">
+        <p>Programs</p>
+      </div>
+      <div class="program-subtitle text-subtitle-2">
+        <p>補足メッセージあればここに書く</p>
+      </div>
     </div>
-    <div class="b text-subtitle-2">
-      <p>プロだから知っている、本当に効果のあるトレーニング</p>
+    <div class="px-6 my-8">
+      <training-menu />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import TrainingMenu from '~/components/TrainingMenu.vue'
 
 @Component({
   components: {
-
+    TrainingMenu,
   },
 })
 export default class Programs extends Vue {
@@ -48,22 +54,24 @@ export default class Programs extends Vue {
   background-color: darkgray;
   position: relative;
 }
-.b {
+
+.program-title {
+  margin-bottom: 5px;
   background-color: white;
-  width: 85%;
+  width: 65%;
   position: absolute;
-  bottom: 23%;
+  top: 10%;
   padding-left: 16px;
   p {
     margin: 0;
   }
 }
-.a {
-  margin-bottom: 5px;
+
+.program-subtitle {
   background-color: white;
-  width: 85%;
+  width: 65%;
   position: absolute;
-  bottom: 30%;
+  top: 18%;
   padding-left: 16px;
   p {
     margin: 0;
