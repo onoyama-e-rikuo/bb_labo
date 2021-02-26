@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="name" class="text-h5 font-weight-medium mt-8">{{ name }}</div>
+    <div id="a" class="text-h5 font-weight-medium mt-8">{{ name }}</div>
     <div class="text-caption font-weight-medium">
       {{ title }} / {{ subTitle }}
     </div>
@@ -13,6 +13,7 @@
     <v-row no-gutters justify="space-around">
         <v-col v-for="interviewee in interviewees" :key="interviewee.id"
                cols="10" class="mt-8">
+            <a href="#" v-scroll-to="{el: '#a', offset: -60}" class="a">
           <v-card
             class="d-flex"
             max-height="70px"
@@ -29,6 +30,7 @@
             </div>
             <v-img :src="interviewee.pic" max-width="50%"></v-img>
           </v-card>
+            </a>
         </v-col>
     </v-row>
   </div>
@@ -36,6 +38,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import VueScrollTo from 'vue-scrollto'
 
 @Component
 export default class Messages extends Vue {
@@ -47,12 +50,12 @@ export default class Messages extends Vue {
     '目標を達成するためには何が必要か？！独立リーグからプロ野球界に飛び込み、その厳しい世界で戦ってきた苦労人だからこそ解ることがあります。努力している皆様の為、彼は自分の事のように寄り添いサポートしてくれると思います。人情味あふれる男、西川雅人と『BB LABO.』をよろしくお願い致します。'
   private pic = require('../assets/images/interview/S__27918358.jpg')
 
-  private scroll() {
-    window.scrollTo({
-      top: this.$refs.name as any,
-      behavior: "smooth"
-    })
-  }
+  // private scroll() {
+  //   window.scrollTo({
+  //     top: this.$refs.name as any,
+  //     behavior: "smooth"
+  //   })
+  // }
 
   private selected(id: number) {
     this.id = id
@@ -198,5 +201,8 @@ export default class Messages extends Vue {
 <style lang="scss" scoped>
 .mini-profile {
   width: 50%;
+}
+.a{
+  text-decoration: none;
 }
 </style>
