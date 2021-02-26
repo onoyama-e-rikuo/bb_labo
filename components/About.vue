@@ -48,7 +48,7 @@
       簡単にプログラムについてのアピールポイントを描く。簡単にプログラムについてのアピールポイントを描く。簡単にプログラムについてのアピールポイントを描く。簡単にプログラムについてのアピールポイントを描く。
     </p>
     <div class="text-center mt-8">
-      <v-btn outlined tile class="font-weight-bold">もっと見る</v-btn>
+      <v-btn outlined tile to="/programs" class="font-weight-bold">もっと見る</v-btn>
     </div>
     <div class="text-center">
       <div class="text-h4 font-weight-medium mt-12">Price</div>
